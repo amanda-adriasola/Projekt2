@@ -2,10 +2,10 @@ package se.uppgift2;
 
 public abstract class Product {
 
-    private String title;
-    private int articleNumber;
-    private double price;
-    private String description;
+    private final String title;
+    private final int articleNumber;
+    private final double price;
+    private final String description;
 
 
     public Product(String title, int articleNumber, String description, double price) {
@@ -37,21 +37,5 @@ public abstract class Product {
         return description;
     }
 
-    public void setArticleNumber(int articleNumber) {
-        this.articleNumber = articleNumber;
 
-    }
-
-    public void setTitle(String tile) {
-        this.title = title;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-
-    }
 }
