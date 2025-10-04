@@ -13,24 +13,24 @@ public class Application {
     }
 
     public void listAllProducts() {
+        System.out.println(" ");
         for (Product product : products) {
-            System.out.println(product.getTitle());
-            System.out.println(product.getDescription());
-            System.out.println(product.getPrice());
-            System.out.println(product.getArticleNumber());
-            System.out.println(product.category());
+            System.out.println(product.getTitle() + " | " + product.getTitle() +
+                    " | " + product.getDescription() + " | " + product.getPrice() +
+                    " | " + product.getArticleNumber() + " | " + product.category());
+
         }
 
     }
 
     public void showProductInfo(int articleNumber) {
+        System.out.println(" ");
         for (Product product : products) {
             if (product.getArticleNumber() == articleNumber) {
-                System.out.println(product.getTitle());
-                System.out.println(product.getDescription());
-                System.out.println(product.getPrice());
-                System.out.println(product.getArticleNumber());
-                System.out.println(product.category());
+                System.out.println(product.getTitle() + " | " + product.getTitle() +
+                        " | " + product.getDescription() + " | " + product.getPrice() +
+                        " | " + product.getArticleNumber() + " | " + product.category());
+
             }
         }
     }
