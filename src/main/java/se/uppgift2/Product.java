@@ -1,7 +1,7 @@
 package se.uppgift2;
 
 public abstract class Product {
-
+    
     private final String title;
     private final int articleNumber;
     private final double price;
