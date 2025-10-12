@@ -5,7 +5,7 @@ public class Main {
 
         Application application = new Application();
 
-    
+
         Product book1 = new Books("Harry Potter", 101, "Fantasy novel about wizards", 199.99);
         Product book2 = new Books("The Hobbit", 102, "Adventure in Middle Earth", 149.99);
 
@@ -23,9 +23,8 @@ public class Main {
         application.addProduct(movie1);
         application.addProduct(movie2);
 
-        application.listAllProducts();
+        application.run();
 
-        application.showProductInfo(201);
 
     }
 }
