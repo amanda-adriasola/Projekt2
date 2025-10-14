@@ -16,16 +16,18 @@ public class Application {
     public void listAllProducts() {
         if (products.isEmpty()) {
             System.out.println("No products available");
-            return;
-        }
-        System.out.println("---ALL PRODUCTS---");
-        for (Product product : products) {
-            System.out.println("Title " + product.getTitle());
-            System.out.println("Article Number " + product.getArticleNumber());
-            System.out.println("Description " + product.getDescription());
-            System.out.println("Price " + product.getPrice());
-            System.out.println("Category " + product.category());
-            System.out.println("-------------------");
+
+        } else {
+            System.out.println("---ALL PRODUCTS---");
+            for (Product product : products) {
+                System.out.println("Title " + product.getTitle());
+                System.out.println("Article Number " + product.getArticleNumber());
+                System.out.println("Description " + product.getDescription());
+                System.out.println("Price " + product.getPrice());
+                System.out.println("Category " + product.category());
+                System.out.println("-------------------");
+            }
+
         }
 
 
@@ -33,6 +35,8 @@ public class Application {
 
     public void showProductInfo(int articleNumber) {
         System.out.println(" ");
+        boolean search = false;
+
         for (Product product : products) {
             if (product.getArticleNumber() == articleNumber) {
                 System.out.println("Title " + product.getTitle());
@@ -41,8 +45,12 @@ public class Application {
                 System.out.println("Price " + product.getPrice());
                 System.out.println("Category " + product.category());
                 System.out.println("-------------------");
-                return;
+                search = true;
+                break;
             }
+        }
+        if (search == false) {
+            System.out.println("No product found");
         }
     }
 
@@ -132,7 +140,10 @@ public class Application {
 
             default:
                 System.out.println("Invalid choice");
-                return;
+                break;
+        }
+        if (product == null) {
+            return;
         }
         addProduct(product);
     }
